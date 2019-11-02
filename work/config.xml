@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config>
+    <weeks>
+        <week>Sunday</week>
+        <week>Monday</week>
+        <week>Tuesday</week>
+        <week>Wednesday</week>
+        <week>Friday</week>
+        <week>Saturday</week>
+    </weeks>
+</config>
