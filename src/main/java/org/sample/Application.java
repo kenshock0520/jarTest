@@ -5,6 +5,7 @@ import org.sample.domain.service.PropService;
 import org.sample.domain.service.XlsService;
 import org.sample.domain.service.XmlService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -23,6 +24,12 @@ public class Application {
 	@Autowired
 	private PropService propService;
 
+	@Value(value = "${spring.profiles.active}")
+	private String profile;
+
+	@Value(value = "${jarTest.testval}")
+	private String testVal;
+
     public static void main(String[] args) {
         try (ConfigurableApplicationContext ctx = SpringApplication.run(Application.class, args)) {
         	Application app = ctx.getBean(Application.class);
@@ -33,6 +40,9 @@ public class Application {
     }
     public void run(String... args) throws Exception {
         System.out.println("処理開始");
+        System.out.println("profile:"+profile);
+        System.out.println("testVal:"+testVal);
+
         //アプリの処理
         xmlService.xmlTest();
         xlsService.xlsTest();
