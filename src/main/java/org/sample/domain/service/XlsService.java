@@ -34,6 +34,7 @@ public class XlsService {
 
 			//取得した文字列の表示
 			System.out.println(value);
+			excel.close();
 		} catch (EncryptedDocumentException e) {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
