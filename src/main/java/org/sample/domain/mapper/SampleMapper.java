@@ -8,4 +8,6 @@ public interface SampleMapper {
 
     @Select("SELECT 100 * 200")
     long calc();
+
+    long xmlCalc();
 }

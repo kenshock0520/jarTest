@@ -11,5 +11,6 @@ public class DbService {
 
 	public void dbTest() {
 		System.out.println("calc:"+sampleMapper.calc());
+		System.out.println("xmlCalc:"+sampleMapper.xmlCalc());
 	}
 }
